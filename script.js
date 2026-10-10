@@ -17,3 +17,24 @@ form.addEventListener("submit", function (event) {
 
     form.reset();
 });
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.getElementById("nav-links");
+
+if (menuToggle && navLinks) {
+    menuToggle.addEventListener("click", function () {
+        navLinks.classList.toggle("active");
+
+        const isOpen = navLinks.classList.contains("active");
+        menuToggle.setAttribute("aria-expanded", isOpen);
+        menuToggle.textContent = isOpen ? "✕" : "☰";
+    });
+
+    navLinks.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
+            navLinks.classList.remove("active");
+            menuToggle.setAttribute("aria-expanded", "false");
+            menuToggle.textContent = "☰";
+        });
+    });
+}

@@ -648,3 +648,61 @@ footer {
         padding: 5px 0;
     }
 }
+/* Dark Mode Button */
+.theme-toggle {
+    background: transparent;
+    color: white;
+    font-size: 24px;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+/* Dark Theme */
+body.dark-mode {
+    background: #0f172a;
+    color: #e2e8f0;
+}
+
+body.dark-mode section:not(.hero) {
+    background: #111c30;
+}
+
+body.dark-mode section h2 {
+    color: #f8fafc;
+}
+
+body.dark-mode #about p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .service-box,
+body.dark-mode .project-box {
+    background: #1e293b;
+    border-color: #334155;
+}
+
+body.dark-mode .service-box p,
+body.dark-mode .project-box p {
+    color: #cbd5e1;
+}
+
+body.dark-mode .service-box h3,
+body.dark-mode .project-box h3 {
+    color: #38bdf8;
+}
+
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+    background: #1e293b;
+    color: white;
+    border-color: #475569;
+}
+
+body.dark-mode .contact-form input::placeholder,
+body.dark-mode .contact-form textarea::placeholder {
+    color: #cbd5e1;
+}

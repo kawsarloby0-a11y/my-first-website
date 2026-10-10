@@ -38,3 +38,19 @@ if (menuToggle && navLinks) {
         });
     });
 }
+// Dark Mode Toggle
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+
+        const isDark = document.body.classList.contains("dark-mode");
+
+        themeToggle.textContent = isDark ? "☀️" : "🌙";
+        themeToggle.setAttribute(
+            "aria-label",
+            isDark ? "Switch to light mode" : "Switch to dark mode"
+        );
+    });
+}

@@ -706,3 +706,26 @@ body.dark-mode .contact-form input::placeholder,
 body.dark-mode .contact-form textarea::placeholder {
     color: #cbd5e1;
 }
+/* Back to Top Button */
+#back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: none;
+    background: #2563eb;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 999;
+    transition: background 0.3s, transform 0.3s;
+}
+
+#back-to-top:hover {
+    background: #1e40af;
+    transform: translateY(-4px);
+}
